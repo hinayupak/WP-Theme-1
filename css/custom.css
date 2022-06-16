@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Ubuntu Condensed';
+    src: url('../fonts/UbuntuCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/UbuntuCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-size: 15px;
+    font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ff6200;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.wp-block-separator {
+    background-color: #525252;
+    height: 5px;
+}
+.entry-title {
+    text-transform: none !important;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.6em;
+}
+a {
+    text-decoration: none;
+}
+a.color-white:hover {
+    color: #be3600;
+}
+.bg-orange {
+    background-color: #ff6200;
+}
+.bg-teal-1 {
+    background-color: #F9F9F9;
+}
+.top-narrow-menu {
+    font-family: 'Ubuntu Condensed';
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+}
+.top-narrow-menu p {
+    margin: 0;
+}
+.top-narrow-menu .tel {
+    margin-left: 10px;
+}
+.signup-menu {
+    margin-left: 10px;
+}
+#menu-narrow-top {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu-narrow-top a {
+    color: #fff;
+    text-transform: uppercase;
+}
+.main-width {
+    width: 990px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.color-white {
+    color: #fff;
+}
+.color-orange {
+    color: #ff6200;
+}
+.color-dark-orange,
+li.color-dark-orange a {
+    color: #be3600 !important;
+}
+.align-right {
+    text-align: right;
+}
+.top-main-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    align-items: center;
+}
+.main-navigation li {
+    padding: 10px 0;
+    display: block;
+    margin: 0 10px;
+    font-family: 'Ubuntu Condensed';
+}
+.main-navigation a {
+    color: #454545;
+    text-transform: uppercase;
+}
+.main-navigation ul.sub-menu {
+    border: 1px solid #333333;
+    /* margin-top: 1.5em; */
+}
+.main-navigation ul.sub-menu li {
+    background-color: #fff;
+}
+.font-bold {
+    font-weight: bold;
+}
+.parent-li.current-menu-item,
+.parent-li.current-menu-ancestor {
+    border-bottom: 4px solid #ff6200;
+}
+.parent-active-menu {
+    color: #333333 !important;
+    font-weight: bold;
+}
+.main-navigation ul ul li:hover > ul {
+    background-color: #fff;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: #f6f6f6;
+    border-radius: 0;
+    padding: 5px;
+    border: 1px solid #EDEDED;
+}
+form .wp-block-columns {
+    margin-bottom: 0;
+}
+.wpcf7-form ::-webkit-input-placeholder { /* Edge */
+    color: #878787;
+}
+.wpcf7-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #878787;
+}
+.wpcf7-form ::placeholder {
+    color: #878787;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: #ff6200;
+    color: #fff;
+    border: 1px solid #ff6200;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: 'Ubuntu Condensed';
+    padding: 0.6em 1.5em;
+}
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: #fff;
+    color: #ff6200;
+    border: 1px solid #ff6200;
+}
+.wp-block-social-link {
+    background-color: #d0d0d0 !important;
+    border-radius: 0;
+}
+.wp-block-social-link:hover {
+    background-color: #363636 !important;
+}
+#breadcrumbs {
+    margin: 2em 0 1em;
+    font-size: 0.9em;
+}
+#breadcrumbs span {
+    color: #222222;
+    font-weight: bold;
+}
+#breadcrumbs span a {
+    color: #929292;
+    font-weight: normal;
+}
+.theme-socials-container {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media screen and (min-width: 782px) {
+    form .wp-block-columns .wp-block-column:nth-of-type(odd) {
+        padding-right: 5px;
+    }
+    form .wp-block-columns .wp-block-column:nth-of-type(even) {
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .top-narrow-menu {
+        display: inline-block;
+    }
+    .align-sm-center {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 599px) {
+    .main-navigation ul {
+        position: absolute;
+        left: 2%;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 20%);
+        border: 1px solid #333333;
+        background-color: #fff;
+        min-width: 96%;
+        margin-top: 1em;
+    }
+    .main-navigation li {
+        background-color: #fff;
+        clear: both;
+        width: 96%;
+    }
+    .main-navigation ul.sub-menu {
+        margin-top: 1em;
+    }
+    .main-navigation ul.sub-menu li {
+        width: auto;
+    }
+    .main-navigation ul ul li:hover > ul {
+        left: 50%;
+        top: 40%;
+    }
+}

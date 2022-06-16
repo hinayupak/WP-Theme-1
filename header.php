@@ -8,7 +8,7 @@
  *
  * @package CT_Custom
  */
-
+$options = get_option( 'theme_settings' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -25,34 +25,54 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ct-custom' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="bg-orange">
+			<div class="top-narrow-menu main-width">
+				<div class="top-narrow-menu-left align-sm-center">
+					<p><span class="color-dark-orange">CALL US NOW</span> <a class="tel color-white" href="tel:<?php echo $options['theme-phone-number']; ?>"><?php echo $options['theme-phone-number']; ?></a></p>
+				</div>
 				<?php
-			else :
+				wp_nav_menu( array(
+					'theme_location' => 'menu-narrow-top',
+					'menu_id'        => 'menu-narrow-top',
+					'fallback_cb'       => false
+				) );
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ct_custom_description = get_bloginfo( 'description', 'display' );
-			if ( $ct_custom_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ct_custom_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ct-custom' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+			</div>
+		</div>
+		<div class="bg-teal-1">
+			<div class="top-main-menu main-width">
+				<div class="site-branding">
+					<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+						<?php
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+							
+							if ( $options['theme-logo'] ) {
+								echo '<img src="' . esc_url( $options['theme-logo'] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+							} else {
+								echo get_bloginfo('name');
+							}
+						?>
+					</a>
+				</div><!-- .site-branding -->
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ct-custom' ); ?></button>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'li_class'		 => 'parent-li'
+					) );
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+		<div class="main-width">
+			<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				}
+			?>

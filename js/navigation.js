@@ -104,3 +104,10 @@
 		}
 	}( container ) );
 } )();
+
+jQuery(document).ready(function($){
+	
+	$('.current-menu-item.parent-li a:first, .current-menu-ancestor.parent-li a:first').addClass('parent-active-menu'); // parent
+	$('.current-menu-item a:first').addClass('font-bold'); // sub
+
+});
